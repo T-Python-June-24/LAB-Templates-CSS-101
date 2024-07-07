@@ -1,0 +1,151 @@
+/* Reset and General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+    background-color: #c1b8b0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+header img {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul.left-menu li, ul.right-menu li {
+    margin-right: 20px;
+}
+
+ul.left-menu li a, ul.right-menu li a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+ul.left-menu li a:hover, ul.right-menu li a:hover {
+    background-color: #131c48;
+    color: #fff;
+}
+
+a.registration {
+    background: #131c48;
+    border-radius: 20px;
+    color: #fff !important;
+}
+
+/* Search Section Styling */
+.search-section {
+    text-align: center;
+    margin-top: 90px;
+}
+
+input[type="text"] {
+    width: 50%;
+    height: 3.5rem;
+    border: none;
+    background: #fff;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 0 #cacaca;
+}
+
+.search-section input[type="text"]:hover,
+.search-section input[type="text"]:focus {
+    box-shadow: 4px 4px 5px 10px #cacaca;
+    outline: none;
+}
+
+.button-search {
+    height: 3.5rem;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 5rem;
+    background: #131c48;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-search:hover {
+    background-color: #0c1437;
+}
+
+/* Book List Styling */
+.list-book {
+    margin: 20px;
+    margin-top: 5rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 0.9rem;
+}
+
+hr.hr {
+    border-color: #131c48;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.book {
+    width: calc(50% - 20px);
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+    display: inline-block;
+    margin: 0.5rem;
+}
+img.banner_welcome {
+    width: 100% !important;
+}
+
+.book img {
+    max-width: 100%;
+    height: 50%;
+}
+
+.book-button {
+    width: 100%;
+    height: 2rem;
+    border-radius: 5rem;
+    background: #ff5757;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: #e54747;
+}

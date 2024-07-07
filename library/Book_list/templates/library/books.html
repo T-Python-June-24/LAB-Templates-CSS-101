@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link rel="stylesheet" href="{% static 'css/style_library.css' %}">
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/logo_library.png' %}" alt="Library Logo"/>
+        <div class="menu">
+            <ul class="left-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Connect Us</a></li>
+            </ul>
+            <ul class="right-menu">
+                <li><a class="registration" href="#">Registration</a></li>
+                <li><a class="login" href="#">Login</a></li>
+            </ul>
+        </div>
+    </header>
+    <section>
+        <img class="banner_welcome" src="{% static 'images/banner_welcome_library.jpg' %}"/>
+    </section>
+    <main>
+        <section class="search-section">
+            <input type="text" name="search" placeholder="Search">
+            <button type="submit" class="button-search">Search</button>
+        </section>
+
+        <section class="list-book">
+            <div>
+                <h1>Books:</h1>
+            </div>
+            <hr class="hr">
+            <div class="books">
+                {% for book_name, book_info in books.items %}
+                <div class="book">
+                    <img src="{% static 'images/' %}{{ book_info.image }}" alt="{{ book_info.name }} Cover">
+                    <h3>{{ book_info.name }}</h3>
+                    <p>{{ book_info.description }}</p>
+                    <p>Price: {{ book_info.price }}</p>
+                    <button class="book-button">Buy Now</button>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+</body>
+</html>

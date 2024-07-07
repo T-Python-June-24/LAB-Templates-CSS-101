@@ -1,0 +1,50 @@
+{
+    "Python Crash Course": {
+        "name": "Python Crash Course",
+        "price": 35.99,
+        "description": "A fast-paced, no-nonsense guide to programming in Python.",
+        "image": "python_crash_course.jpg"
+    },
+    "Automate the Boring Stuff with Python": {
+        "name": "Automate the Boring Stuff with Python",
+        "price": 29.99,
+        "description": "Practical programming for total beginners to automate tasks.",
+        "image": "automate_boring_stuff.jpg"
+    },
+    "Fluent Python": {
+        "name": "Fluent Python",
+        "price": 49.99,
+        "description": "Clear, concise, and effective programming in Python.",
+        "image": "fluent_python.jpg"
+    },
+    "Learning Python": {
+        "name": "Learning Python",
+        "price": 44.99,
+        "description": "Comprehensive guide to learning Python.",
+        "image": "learning_python.jpg"
+    },
+    "Python Data Science Handbook": {
+        "name": "Python Data Science Handbook",
+        "price": 39.99,
+        "description": "Essential tools for working with data in Python.",
+        "image": "python_data_science_handbook.jpg"
+    },
+    "Django for Beginners": {
+        "name": "Django for Beginners",
+        "price": 27.99,
+        "description": "A beginner's guide to web development with Django.",
+        "image": "logo_library.png"
+    },
+    "Effective Python": {
+        "name": "Effective Python",
+        "price": 38.99,
+        "description": "Best practices for writing Pythonic code.",
+        "image": "effective_python.jpg"
+    },
+    "Python Cookbook": {
+        "name": "Python Cookbook",
+        "price": 42.50,
+        "description": "Recipes for mastering Python.",
+        "image": "python_cookbook.jpg"
+    }
+}
