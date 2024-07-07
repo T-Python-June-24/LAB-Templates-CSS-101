@@ -18,6 +18,7 @@
       background-color: #f5f5f5;
     }
 
+
     /* Section styles */
     .section {
       display: flex;
@@ -94,7 +95,28 @@
       margin-right: 5px;
       margin-bottom: 5px;
     }
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
 
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: teal; }
+}
     table {
       width: 100%;
       border-collapse: collapse;
@@ -118,49 +140,17 @@
 </head>
 
 <body>
-  <header class="w-dvw absolute top-0 left-1/2 -translate-x-1/2 z-[1000] py-4">
-    <div class="max-w-[120rem] text-teal-500 px-6 md:px-8 lg:px-10">
-      <nav class="w-full flex flex-row items-center font-sans">
-        <a class="text-teal-500" href="/"></a>
-        <svg class="h-8 w-8" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="94" y="81" width="40" height="350" fill="currentColor"></rect>
-          <rect x="264" y="81" width="40" height="350" fill="currentColor"></rect>
-          <circle cx="199" cy="131" r="50" fill="currentColor"></circle>
-          <circle cx="199" cy="246" r="50" fill="currentColor"></circle>
-          <circle cx="369" cy="131" r="50" fill="currentColor"></circle>
-          <circle cx="369" cy="246" r="50" fill="currentColor"></circle>
-        </svg>
-        </a>
-        <div class="flex-1 relative hidden md:flex items-center justify-center">
-            <ul class="mx-auto inline-flex gap-6 text-sm font-bold">
-            <li>
-              <a class="font-bold relative after:h-px after:content-[''] after:w-full after:absolute after:top-full after:bg-accent-500 after:left-0 after:translate-y-1 hover:text-accent-500"
-                href=""></a>
-            </li>
-            <li class = class="h-10 rounded-lg flex items-center justify-center text-base bg-accent-500 leading-none px-12 uppercase hover:bg-teal-500 hover:text-white font-bold"><a href="{% url 'DjangoWeb:learn' %}">Why us?</a></li>
-            <li><a href="">Plans</a></li>
-            <li><a href="">Mission</a></li>
-          </ul>
-          </ul>
-          <ul class="absolute right-0">
-            <li class="relative">
-              <a class="h-10 rounded-lg flex items-center justify-center text-base bg-accent-500 leading-none px-18 uppercase hover:bg-teal-500 hover:text-white font-bold"
-                href="">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      </nav>
-    </div>
-  </header>
+
+  {% include 'DjangoWeb/navbar.html' %}
+
   <section class="section">
     <div class="lottie-container" id="lottie-container"></div>
 
-    <h1 style="font-size: 50px;">Welcome To Mr.IT </h1>
-    <div class="section">
-      <h2>Assets Management</h2>
-      <p>Assets management involves operating, maintaining, upgrading, and disposing of assets in the most cost-effective manner, considering all costs, risks, and performance attributes.</p>
-  
+    <h1 style="font-size: 80px;" class="text-teal-500 ">Welcome To Mr.IT </h1>
+    <br>
+    <div class="table">
+      <h2 class="animated-text text-teal-500">Assets Management</h2><br>
+      <p class="">Assets management involves operating, maintaining, upgrading, and disposing of assets in the most cost-effective manner, considering all costs, risks, and performance attributes.</p>
       <table>
         <thead>
           <tr>
