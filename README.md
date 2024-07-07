@@ -114,10 +114,6 @@
    - Understand best practices for writing clean and maintainable CSS.
    - Resources: WebAIM - [Introduction to Web Accessibility](https://webaim.org/intro/), MDN Web Docs - [CSS Best Practices](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing)
 
-7. **7: Final Project**
-   - Create a multi-page website (e.g., portfolio, blog) using HTML and CSS.
-   - Apply all concepts learned, ensuring responsive design, accessibility, and polished styling.
-   - Resources: Personal creativity and online inspiration.
 
 ### Additional Tips
 - **Practice Regularly:** Consistency is key to mastering HTML and CSS.
