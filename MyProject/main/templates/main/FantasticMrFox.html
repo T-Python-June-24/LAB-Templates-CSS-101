@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/MainStyle.css'%}">
-    <title> Fantastic Mr. Fox</title>
-  
-
+    <link rel="stylesheet" href="{% static 'css/MainStyle.css' %}">
+    <title>Fantastic Mr. Fox</title>
+</head>
 <body style="background-image: url('https://w0.peakpx.com/wallpaper/817/325/HD-wallpaper-movie-fantastic-mr-fox.jpg'); background-size: cover; background-repeat: no-repeat;">
     <div class="blur-container">
         <div class="image-container">
@@ -16,6 +15,13 @@
         <div class="text-container">
             <h1>Fantastic Mr. Fox</h1>
             <p>After 12 years of bucolic bliss, Mr. Fox (George Clooney) breaks a promise to his wife (Meryl Streep) and raids the farms of their human neighbors, endangering not only his marriage but also the lives of his family and their animal friends. When the farmers force Mr. Fox and company deep underground, he must resort to his natural craftiness to rise above the opposition.</p>
+            <div class="rating">
+                <span style="cursor: pointer;">&#9733;</span>
+                <span style="cursor: pointer;">&#9733;</span>
+                <span style="cursor: pointer;">&#9733;</span>
+                <span style="cursor: pointer;">&#9733;</span>
+                <span style="cursor: pointer;">&#9733;</span>
+            </div>
             <div class="links">
                 <a href="https://www.imdb.com/title/tt0432283/">IMDb</a>
                 <a href="https://youtu.be/n2igjYFojUo?si=sQDF3TKIqrmwzJtf">Official Trailer</a>
@@ -23,4 +29,15 @@
             </div>
         </div>
     </div>
+    <script>
+        const stars = document.querySelectorAll('.rating > span');
+        stars.forEach((star, index) => {
+            star.onclick = () => {
+                stars.forEach((otherStar, otherIndex) => {
+                    otherStar.style.color = otherIndex <= index ? 'gold' : 'gray';
+                });
+            };
+        });
+    </script>
 </body>
+</html>

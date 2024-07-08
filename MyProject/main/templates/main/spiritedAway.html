@@ -5,25 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/MainStyle.css'%}">
-    <title> Spirited Away  </title>
-
+    <title>Spirited Away</title>
 </head>
 <body style="background-image: url('https://wallpapers.com/images/featured/spirited-away-glulkohud4k8bubt.jpg'); background-size: cover; background-repeat: no-repeat;">
     <div class="blur-container">
         <div class="image-container">
-            <img src="{% static 'images/spiritedAway.jpg' %}" alt="Fantastic Mr. Fox poster">
+            <img src="{% static 'images/spiritedAway.jpg' %}" alt="Spirited Away poster">
         </div>
         <div class="text-container">
             <h1>Spirited Away</h1>
             <h2>Original title: Sen to Chihiro no kamikakushi</h2>
-                
-            <p>10-year-old Chihiro (Daveigh Chase) moves with her parents to a new home in the Japanese countryside. After taking a wrong turn down a wooded path, Chihiro and her parents discover an amusement park with a stall containing an assortment of food. To her surprise, Chihiro's parents begin eating and then transform into pigs. In this supernatural realm, Chihiro encounters a host of characters and endures labor in a bathhouse for spirits, awaiting a reunion with her parents</p>
+            <p>10-year-old Chihiro (Daveigh Chase) moves with her parents to a new home in the Japanese countryside. After taking a wrong turn down a wooded path, Chihiro and her parents discover an amusement park with a stall containing an assortment of food. To her surprise, Chihiro's parents begin eating and then transform into pigs. In this supernatural realm, Chihiro encounters a host of characters and endures labor in a bathhouse for spirits, awaiting a reunion with her parents.</p>
+            <div class="rating">
+                <span style="cursor: pointer;">&#9733;</span>
+                <span style="cursor: pointer;">&#9733;</span>
+                <span style="cursor: pointer;">&#9733;</span>
+                <span style="cursor: pointer;">&#9733;</span>
+                <span style="cursor: pointer;">&#9733;</span>
+            </div>
             <div class="links">
                 <a href="https://www.imdb.com/title/tt0245429/">IMDb</a>
                 <a href="https://youtu.be/ByXuk9QqQkk?si=8xekm-SDl4Yhcizd">Official Trailer</a>
-                <a href="https://www.netflix.com/watch/60023642?source=35">Watch it on netflix</a>
+                <a href="https://www.netflix.com/watch/60023642?source=35">Watch it on Netflix</a>
             </div>
         </div>
     </div>
+    <script>
+        const stars = document.querySelectorAll('.rating > span');
+        stars.forEach((star, index) => {
+            star.onclick = () => {
+                stars.forEach((otherStar, otherIndex) => {
+                    otherStar.style.color = otherIndex <= index ? 'gold' : 'gray';
+                });
+            };
+        });
+    </script>
 </body>
 </html>
