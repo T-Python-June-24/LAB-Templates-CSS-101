@@ -11,7 +11,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    /* Global styles */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -19,7 +18,6 @@
     }
 
 
-    /* Section styles */
     .section {
       display: flex;
       flex-direction: column;
@@ -30,7 +28,6 @@
       background-color: #ffffff;
     }
 
-    /* Lottie animation container */
     .lottie-container {
       width: 340px;
       height:340px;
@@ -95,28 +92,38 @@
       margin-right: 5px;
       margin-bottom: 5px;
     }
-.typewriter h1 {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+
+    
+h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; 
+  border-right: .10em solid rgb(100, 239, 202);
+  white-space: nowrap; 
+  margin: 0 auto;
+  letter-spacing: .15em; 
   animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+    typing 3.5s steps(17, end),
+    blink-caret .5s step-end infinite;
 }
 
-/* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 70% }
 }
 
-/* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: teal; }
+  50% { border-color:  rgba(31, 255, 221, 0.517);
+  }
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+    
     table {
       width: 100%;
       border-collapse: collapse;
@@ -141,16 +148,17 @@
 
 <body>
 
-  {% include 'DjangoWeb/navbar.html' %}
+  {% include 'DjangoWeb/navbarT.html' %}
 
   <section class="section">
     <div class="lottie-container" id="lottie-container"></div>
 
     <h1 style="font-size: 80px;" class="text-teal-500 ">Welcome To Mr.IT </h1>
     <br>
+
     <div class="table">
-      <h2 class="animated-text text-teal-500">Assets Management</h2><br>
-      <p class="">Assets management involves operating, maintaining, upgrading, and disposing of assets in the most cost-effective manner, considering all costs, risks, and performance attributes.</p>
+      <h2 class="animated-text text-teal-500" style="font-size: larger;">Assets Management</h2><br><br>
+      <p class="capitalize text-transform: uppercase;">Assets management involves operating, maintaining, upgrading, and disposing of assets in the most cost-effective manner, considering all costs, risks, and performance attributes.</p>
       <table>
         <thead>
           <tr>
@@ -239,7 +247,7 @@
     </div>
     <section class="container">
       <footer class="text-center py-4">
-        &copy; 2024 Mr.IT ❤️. All Rights Reserved.
+        &copy; 2024 Mr.IT ❤️. All Rights Reserved. ®
       </footer>
     </section>
 
