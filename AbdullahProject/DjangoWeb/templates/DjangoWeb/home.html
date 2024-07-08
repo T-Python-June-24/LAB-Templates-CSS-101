@@ -42,13 +42,11 @@
           blink-caret .5s step-end infinite;
       }
       
-      /* The typing effect */
       @keyframes typing {
         from { width: 0 }
         to { width: 70% }
       }
       
-      /* The typewriter cursor effect */
       @keyframes blink-caret {
         from, to { border-color: transparent }
         50% { border-color:  rgba(31, 255, 221, 0.517);
@@ -78,11 +76,11 @@
                             efficiently tracked, maintained, and utilized. We are here to make this process easier for
                             you.</p>
                         <div class="md:flex-row flex-col flex gap-4">
-                            <a href="{% url 'DjangoWeb:learn' %}"
+                            <a href="{% url 'DjangoWeb:form' %}"
                                 class="inline-block text-base font-medium px-12 py-2 bg-accent-400 rounded-lg cursor-pointer">
                                 Learn More 
                             </a>
-                            <a href="{% url 'DjangoWeb:learn' %}"
+                            <a href="{% url 'DjangoWeb:form' %}"
                                 class="inline-block text-base font-medium px-12 py-2 border border-accent-400 rounded-lg text-accent-400 cursor-pointer bg-gray-50/10 backdrop-blur-3xl">
                                 Send Message
                             </a>

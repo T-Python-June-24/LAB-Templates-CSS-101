@@ -9,4 +9,4 @@ def learnMore(request:HttpResponse):
     return render(request, 'DjangoWeb/form.html')
 
 def sendMessages(request:HttpResponse):
-    return render(request, 'DjangoWeb/contactus.html')
+    return render(request, 'DjangoWeb/about.html')

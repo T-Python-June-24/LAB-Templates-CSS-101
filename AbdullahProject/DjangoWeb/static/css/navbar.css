@@ -1,58 +1,54 @@
 * {
     margin: 0;
     padding: 0;
-    }
-    
-    body {
-        min-height: 100vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    }
+body {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    nav{
-        background-color: white;
-        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-    }
+nav {
+    background-color: black;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
 
-    nav ul {
-        width: 100%;
-        list-style: none;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-    }
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 
+nav li {
+    height: 50px;
+}
 
-    nav li {
-        height: 50px;
-    }
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    color: #73e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
 
+nav a:hover {
+    background-color: rgb(144, 255, 255);
+    border-radius: 5px;
+}
 
-    nav a {
-        height: 100%;
-        padding: 0 30px;
-        text-decoration: none;
-        color: #008080;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-    }
+nav li:first-child {
+    margin-right: auto;
+}
 
-    nav a:hover {
-        background-color: rgba(31, 255, 221, 0.517);
-        border-radius: 5px;
-    }
-
-
-    nav li:first-child {
-        margin-right: auto;
-    }
-
-.sidebar{
+.sidebar {
     position: fixed;
     top: 0;
     right: 0;
@@ -66,6 +62,38 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(250px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(250px);
+    }
+}
+
+.sidebar.show {
+    display: flex;
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+.sidebar.hide {
+    animation: slideOut 0.5s ease-in-out forwards;
+    display: flex; /* Display flex during animation */
+}
+
+.sidebar.hidden {
+    display: none;
 }
 
 .sidebar li {
@@ -85,13 +113,12 @@
         display: none;
     }
 
-    .menu-button{
+    .menu-button {
         display: block;
     }
-
 }
 
-@media (max-width:400px){
+@media (max-width: 400px) {
     .sidebar {
         width: 100%;
     }

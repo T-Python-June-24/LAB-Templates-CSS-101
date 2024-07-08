@@ -1,7 +1,7 @@
-* {
+  * {
     padding: 0;
     margin: 0;
-    color: #1a1f36;
+    color: #1d4044;
     box-sizing: border-box;
     word-wrap: break-word;
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
@@ -14,7 +14,7 @@
       letter-spacing: -1px;
   }
   a {
-    color: #54d481;
+    color: #4fd1c5;
     text-decoration: unset;
   }
   .login-root {
@@ -64,22 +64,22 @@
 }
 
   .box-divider--light-all-2 {
-      box-shadow: inset 0 0 0 2px #e3e8ee;
+      box-shadow: inset 0 0 0 2px #e6fffa;
   }
   .box-background--blue {
-      background-color: #14503b;
+      background-color: #4fd1c5;
   }
   .box-background--white {
     background-color: #ffffff; 
   }
   .box-background--blue800 {
-      background-color: #1d4f31;
+      background-color: #319795;
   }
   .box-background--gray100 {
       background-color: #e3e8ee;
   }
   .box-background--cyan200 {
-      background-color: #7fedc3;
+      background-color: #81e6d9;
   }
   .padding-top--64 {
     padding-top: 64px;
@@ -118,7 +118,7 @@
       display: block;
       font-size: 20px;
       line-height: 28px;
-      color: #1a1f36;
+      color: #2c7a7b;
   }
   label {
       margin-bottom: 10px;
@@ -146,7 +146,7 @@
       min-height: 44px;
       border: unset;
       border-radius: 4px;
-      outline-color: rgba(10, 71, 27, 0.5);
+      outline-color: rgba(166, 255, 191, 0.5);
       background-color: rgb(255, 255, 255);
       box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
                   rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
@@ -158,7 +158,7 @@
   }
   
   input[type="submit"] {
-      background-color: rgb(84, 212, 156);
+      background-color: #4fd1c5;
       box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
                   rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
                   rgba(0, 0, 0, 0.12) 0px 1px 1px 0px, 
@@ -192,7 +192,7 @@
       text-align: center;
   }
   .listing a {
-      color: #569b68;
+      color: #1b2b1f;
       font-weight: 600;
       margin: 0 10px;
   }
