@@ -60,41 +60,8 @@
 
 <body>
     <div>
-        <header class="w-dvw absolute top-0 left-1/2 -translate-x-1/2 z-[1000] py-4">
-            <div class="max-w-[120rem] text-gray-50 px-6 md:px-8 lg:px-10">
-                <nav class="w-full flex flex-row items-center font-sans">
-                    <a class="text-gray-50" href="/">
-                        <svg class="h-8 w-8" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="94" y="81" width="40" height="350" fill="currentColor"></rect>
-                            <rect x="264" y="81" width="40" height="350" fill="currentColor"></rect>
-                            <circle cx="199" cy="131" r="50" fill="currentColor"></circle>
-                            <circle cx="199" cy="246" r="50" fill="currentColor"></circle>
-                            <circle cx="369" cy="131" r="50" fill="currentColor"></circle>
-                            <circle cx="369" cy="246" r="50" fill="currentColor"></circle>
-                        </svg>
-                    </a>
-                    <div class="flex-1 relative hidden md:flex items-center justify-center">
-                        <ul class="mx-auto inline-flex gap-6 text-sm font-light">
-                            <li>
-                                <a class="font-bold relative after:h-px after:content-[''] after:w-full after:absolute after:top-full after:bg-accent-500 after:left-0 after:translate-y-1 hover:text-accent-500"
-                                    href=""></a>
-                            </li>
-                            <li><a href="{% url 'DjangoWeb:learn' %}">Why us?</a></li>
-                            <li><a href="{% url 'DjangoWeb:contact' %}">Plans</a></li>
-                            <li><a href="{% url 'DjangoWeb:home' %}">Mission</a></li>
-                        </ul>
-                        </ul>
-                        <ul class="absolute right-0">
-                            <li class="relative">
-                                <a class="h-10 rounded-lg flex items-center justify-center text-base bg-accent-500 leading-none px-12 uppercase hover:bg-accent-400"
-                                    href="">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-                </nav>
-            </div>
-        </header>
+            {% include 'DjangoWeb/navbarT.html' %}
+
         <section class="h-dvh w-dvw max-h-[80rem] relative">
             <div class="absolute inset-0 z-[1]">
                 <img class="h-full w-full object-cover object-center animate-fadeIn"
@@ -105,14 +72,8 @@
                     <div class="mt-auto mb-0 text-gray-50 md:pb-36 space-y-6 animate-fadeIn">
                         <span class="font-light text-sm text-accent-500 ">Mr.IT</span>
                         
-                        <h1 class="text-3xl md:text-5xl max-w-[30rem] font-medium">
-                            Simplifying Asset Management for Your
-                            Business</h1>
-                        <script>
-                            // Your JavaScript code here
-                        </script>
-                        <p
-                            class="max-w-[30rem] font-light ml-4 before:content-[''] relative before:absolute before:w-px before:h-full before:left-0 before:top-0 before:-translate-x-4 before:bg-accent-500 md:text-base text-sm">
+                        <h1 class="text-3xl md:text-5xl max-w-[30rem] font-medium">Simplifying Asset Management for Your Business</h1>
+                        <p                           class="max-w-[30rem] font-light ml-4 before:content-[''] relative before:absolute before:w-px before:h-full before:left-0 before:top-0 before:-translate-x-4 before:bg-accent-500 md:text-base text-sm">
                             Asset management is a crucial aspect of any organization, ensuring that all assets are
                             efficiently tracked, maintained, and utilized. We are here to make this process easier for
                             you.</p>
