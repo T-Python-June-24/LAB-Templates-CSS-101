@@ -55,11 +55,15 @@
       padding: 20px;
       text-align: center;
       transition: transform 0.3s ease-in-out;
+      animation: float 3s ease-in-out infinite;
+
     }
 
 
     .card:hover {
       transform: translateY(-5px);
+      animation: float 3s ease-in-out infinite;
+
     }
 
     .card img {
@@ -94,8 +98,8 @@
     }
 
     
-h1 {
-  color: #fff;
+.h1 {
+  color: black;
   font-family: monospace;
   overflow: hidden; 
   border-right: .10em solid rgb(100, 239, 202);
@@ -123,42 +127,81 @@ h1 {
     font-size: 40px;
   }
 }
-    
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      border: #555555;
-    }
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+          border: #555555;
+        }
 
-    th, td {
-      padding: 10px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-    }
+        th, td {
+          padding: 10px;
+          text-align: center;
+          border-bottom: 1px solid #ddd;
+          animation: fade-in 3s ease-in-out;
 
-    th {
-      background-color: #f2f2f2;
-      text-align: center;
+        }
 
-    }
+        th {
+          background-color: #f2f2f2;
+          text-align: center;
+          animation: fade-in 3s ease-in-out;
+        }
+        h2{
+          animation: fade-in 3s ease-out;
+        }
 
-  </style>
+        @keyframes fade-in {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        @keyframes slide-in {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+
+        @keyframes float {
+          0% {
+            transform: translate(0, 0px);
+          }
+          50% {
+            transform: translate(0, 15px);
+          }
+          100% {
+            transform: translate(0, -0px);
+          }
+        }
+
+        h2{
+          animation: float 3s ease-in-out infinite;
+        }
+      </style>
+
 </head>
 
 <body>
 
-  {% include 'DjangoWeb/navbarT.html' %}
+  {% include 'DjangoWeb/navbar.html' %}
 
   <section class="section">
     <div class="lottie-container" id="lottie-container"></div>
 
-    <h1 style="font-size: 80px;" class="text-teal-500 ">Welcome To Mr.IT </h1>
+    <h1 style="font-size: 80px;" class=" h1 text-teal-500 ">Welcome To Mr.IT </h1>
     <br>
 
     <div class="table">
-      <h2 class="animated-text text-teal-500" style="font-size: larger;">Assets Management</h2><br><br>
-      <p class="capitalize text-transform: uppercase;">Assets management involves operating, maintaining, upgrading, and disposing of assets in the most cost-effective manner, considering all costs, risks, and performance attributes.</p>
+      <h2 class="animated-text text-teal-500" style="font-size: larger;">Assets Management Types</h2><br><br>
+
       <table>
         <thead>
           <tr>
@@ -188,7 +231,10 @@ h1 {
             <td>Long-term assets like buildings, land, machinery, etc., used in production.</td>
           </tr>
         </tbody>
+  
       </table>
+      <br><br>
+      <p class="capitalize text-transform: uppercase;">Assets management involves operating, maintaining, upgrading, and disposing of assets in the most cost-effective manner, considering all costs, risks, and performance attributes.</p>
     </div>
  
           <script>
@@ -204,9 +250,10 @@ h1 {
   </section>
 
 
-
-
+<br>
+  <h1 class = "h"style="text-align: center; font-size: 55px;">What Mr.IT Offer 🪄</h1>
   <section class="container">
+
     <div class="card">
       <img src="{% static '/images/asset.avif' %}" alt="Image" style="width: 100%; height: 200px;">
       <div class="title">Assets Management 📊</div>
