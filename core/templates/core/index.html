@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %} 
+{% load static %}
+{% block content %}
+<div class="bg-image">
+  <div class="moon"></div>
+  <div class="planet"></div>
+  <div class="comet"></div>
+  <div class="content">
+    <h1 class="display-4 fade-in">Cosmic Whispers</h1>
+    <p class="lead fade-in">Unraveling the secrets of the universe</p>
+    <p class="quote fade-in">
+      "The universe is not only queerer than we suppose, but queerer than we can suppose." - J.B.S. Haldane
+    </p>
+  </div>
+</div>
+{% endblock %} {% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{% static 'js/index.js' %}"></script>
+{% endblock %}
