@@ -12,3 +12,10 @@ def FantasticMrFox(request:HttpRequest):
 
 def spiritedAway(request:HttpRequest):
     return render(request,"main/spiritedAway.html")
+def Coco(request:HttpRequest):
+    return render(request,"main/Coco.html")
+def It_2017(request:HttpRequest):
+    return render(request,"main/It_2017.html")
+
+def split(request:HttpRequest):
+    return render(request,"main/split.html")

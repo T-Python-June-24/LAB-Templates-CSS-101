@@ -5,46 +5,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Recommendation Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
         body, html {
-            background-color: #333; /* Dark grey background */
-            color: #f4f4f2; /* Light grey text */
-            font-family: Arial, sans-serif; /* Set a nice readable font */
+            background-color: #282c34; /* Dark background for better contrast */
+            color: #c3afb9; /* Soft white text color */
+            font-family: 'Roboto', sans-serif; /* Roboto font for modern look */
             margin: 0;
             padding: 0;
-            text-align: center; /* Center align the text and images */
+            text-align: center;
+        }
+
+        header, footer {
+            background: #20232a;
+            padding: 10px 0;
+            color: white;
+            text-align: center;
         }
 
         h1, h2 {
-            margin: 20px 0; /* Add vertical spacing around headings */
+            margin: 20px 0;
+            color: #d0d0d0; /* Light blue, similar to React's default styling */
         }
 
         img {
             width: 200px;
-            height: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 3D effect and shadow */
-            margin: 10px; /* Spacing between images */
-            border-radius: 10px; /* Optional: Rounded corners for a softer look */
+            height: auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px;
+            border-radius: 10px;
         }
+
         img:hover {
-            transform: translateY(-10px) scale(1.05); /* Move up slightly and scale up when hovered */
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8); /* Strong shadow to enhance the 3D effect */
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        a {
+            color: #61dafb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8em;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Personal Movie Recommendations !</h1>
-    <p>Explore a curated list of must-watch movies, each chosen based on my own experiences.</p>
+    <header>
+        <h1>Welcome to My Personal Movie Recommendations!</h1>
+        <p>Explore a curated list of must-watch movies, each chosen based on my own experiences.</p>
+    </header>
 
-    <h2>Animation Movies</h2>
-    <a href="{% url 'main:FantasticMrFox' %}">
-        <img src="{% static 'images/FantasticMrFox.jpg' %}" alt="Fantastic Mr Fox poster">
-    </a>
-    <img src="{% static 'images/spiritedAway.jpg' %}" alt="Spirited Away poster">
-    <img src="{% static 'images/Coco.jpg' %}" alt="Coco poster">
-    <br>
+    <section>
+        <h2>Animation Movies</h2>
+        <div class="container">
+            <a href="{% url 'main:FantasticMrFox' %}">
+                <img src="{% static 'images/FantasticMrFox.jpg' %}" alt="Fantastic Mr Fox poster">
+            </a>
+            <a href="{% url 'main:spiritedAway' %}">
+                <img src="{% static 'images/spiritedAway.jpg' %}" alt="Spirited Away poster">
+            </a>
+            <a href="{% url 'main:Coco' %}">
+                <img src="{% static 'images/Coco.jpg' %}" alt="Coco poster">
+            </a>
+        </div>
+    </section>
     
-    <h2>Horror Movies</h2>
-    <img src="{% static 'images/IT.jpg' %}" alt="IT 2017 poster">
+    <section>
+        <h2>Horror Movies</h2>
+        <div class="container">
+            <a href="{% url 'main:It_2017' %}"> 
+                <img src="{% static 'images/IT.jpg' %}" alt="IT 2017 poster">
+            </a>
+            <a href="{% url 'main:split' %}"> 
+                <img src="{% static 'images/Split.jpg' %}" alt="IT 2017 poster">
+
+        </div>
+    </section>
+
+    <footer>
+    </footer>
 </body>
 </html>
