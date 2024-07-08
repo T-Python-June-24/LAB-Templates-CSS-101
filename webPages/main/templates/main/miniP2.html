@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        </style>
+    <link rel="stylesheet" href="{% static 'stylesheet/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <div class="center-div"  >
+        
+        <div>
+            <form action="" class="center-div" id="form">
+                <header>
+                    <h3>Contact me</h3>
+                </header>
+                <div>
+                    <p ><label for="" >Name:</label> <br>
+                        <input type="text" style="width: 500px; border-radius: 5px;" > </p>
+                    <p><label for="">Email</label><br>
+                        <input type="email" style="width: 500px;  border-radius: 5px;"> </p>
+                    <p><label for="">password</label><br>
+                         <input type="password" style="width: 500px;  border-radius: 5px;">
+                    </p>
+                    <p><label for="" > write a message for me:</label><br><textarea name="" id="" placeholder="wirte here" cols="50" style="width: 500px;  border-radius: 5px; margin-top: 10px;"></textarea></p>
+                </div>
+                <div style="display: flex;  "><input type="submit" value="Send" style="width: 500px; border-radius: 5px; padding: 5px; margin: 5px;"></div>
+                <input type="reset" value="Clear"  style="width: 500px; border-radius: 5px; padding: 5px; margin: 5px;">
+                
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
