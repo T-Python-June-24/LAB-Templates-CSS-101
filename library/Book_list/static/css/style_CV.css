@@ -6,6 +6,11 @@
 body{
     background-color: black;
 }
+img.linkedn {
+    height: 2rem;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
 .photo_my {
 	border-radius: 50%;
 	border: 2px solid #fff;
@@ -52,6 +57,7 @@ hr.hr{
     width: 25%;
     margin-left: 0;
     border-style:dashed;
+    color: #fff;
     
 }
 span{

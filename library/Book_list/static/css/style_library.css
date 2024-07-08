@@ -1,3 +1,62 @@
+
+body:before {
+    content: "";
+    position: fixed;
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    z-index: 99999999 !important;
+    display: block;
+    transform: scale(0);
+    animation: sa  3s;
+}
+body:after {
+    content: "";
+    background-image: url( '../images/logo_library.png' ) !important;
+    background-position: center !important;
+    z-index: 999999999 !important;
+    background-size: 100px !important;
+    position: fixed;
+    display: flex;
+    width: 50%;
+    height: 50%;
+    transform: scale(0);
+    animation: sa1 3s;
+    top: 25%;
+    left: 25%;
+    background-repeat: no-repeat;
+}
+@keyframes sa{
+0% {
+    transform: scale(1);
+}
+
+35%, 60% {
+    transform: scale(2);
+}
+75% {
+    transform: scale(1);
+}
+95%, 100% {
+    transform: scale(0);
+}
+}
+@keyframes sa1{
+0% {
+    transform: scale(0);
+}
+35% {
+    transform: scale(2);
+}
+75% {
+    transform: scale(1.5);
+}
+100% {
+    transform: scale(0);
+}
+
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
