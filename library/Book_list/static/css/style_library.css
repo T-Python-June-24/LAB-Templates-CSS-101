@@ -1,4 +1,3 @@
-/* Reset and General Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +5,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Header Styling */
 header {
     background-color: #c1b8b0;
     display: flex;
@@ -55,7 +53,6 @@ a.registration {
     color: #fff !important;
 }
 
-/* Search Section Styling */
 .search-section {
     text-align: center;
     margin-top: 90px;
@@ -96,7 +93,7 @@ input[type="text"] {
     background-color: #0c1437;
 }
 
-/* Book List Styling */
+
 .list-book {
     margin: 20px;
     margin-top: 5rem;
@@ -108,15 +105,19 @@ input[type="text"] {
 hr.hr {
     border-color: #131c48;
 }
-
 .books {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
+.linkedn {
+	height: 2rem;
+	margin-top: 2rem;
+	border-radius: 50%;
+}
 .book {
-    width: calc(50% - 20px);
+    width: calc(25% - 20px);
     background-color: #f0f0f0;
     padding: 10px;
     border: 1px solid #ccc;
@@ -124,6 +125,7 @@ hr.hr {
     text-align: center;
     display: inline-block;
     margin: 0.5rem;
+    display: grid;
 }
 img.banner_welcome {
     width: 100% !important;
@@ -131,7 +133,7 @@ img.banner_welcome {
 
 .book img {
     max-width: 100%;
-    height: 50%;
+    height: 30rem;
 }
 
 .book-button {
@@ -148,4 +150,24 @@ img.banner_welcome {
 
 .book-button:hover {
     background-color: #e54747;
+}
+footer img {
+	width: 10rem;
+}
+
+.about {
+	display: flex;
+	height: 10rem;
+	margin: 2rem;
+    margin-bottom: 4rem;
+}
+footer h1 {
+	color: #ff5757;
+}
+.about_text {
+	margin-left: 2rem;
+	margin-right: 35rem;
+}
+footer a {
+	margin-left: 1rem;
 }
