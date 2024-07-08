@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation Page</title>
+    <style>
+        body, html {
+            background-color: #333; /* Dark grey background */
+            color: #f4f4f2; /* Light grey text */
+            font-family: Arial, sans-serif; /* Set a nice readable font */
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Center align the text and images */
+        }
+
+        h1, h2 {
+            margin: 20px 0; /* Add vertical spacing around headings */
+        }
+
+        img {
+            width: 200px;
+            height: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* 3D effect and shadow */
+            margin: 10px; /* Spacing between images */
+            border-radius: 10px; /* Optional: Rounded corners for a softer look */
+        }
+        img:hover {
+            transform: translateY(-10px) scale(1.05); /* Move up slightly and scale up when hovered */
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8); /* Strong shadow to enhance the 3D effect */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Personal Movie Recommendations !</h1>
+    <p>Explore a curated list of must-watch movies, each chosen based on my own experiences.</p>
+
+    <h2>Animation Movies</h2>
+    <a href="{% url 'main:FantasticMrFox' %}">
+        <img src="{% static 'images/FantasticMrFox.jpg' %}" alt="Fantastic Mr Fox poster">
+    </a>
+    <img src="{% static 'images/spiritedAway.jpg' %}" alt="Spirited Away poster">
+    <img src="{% static 'images/Coco.jpg' %}" alt="Coco poster">
+    <br>
+    
+    <h2>Horror Movies</h2>
+    <img src="{% static 'images/IT.jpg' %}" alt="IT 2017 poster">
+</body>
+</html>

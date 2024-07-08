@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/MainStyle.css'%}">
+    <title>Movie Recommendation: Fantastic Mr. Fox</title>
+    
+    <!-- <style>
+        body, html {
+            height: 100%; /* Ensure the full height of the viewport */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Prevent scrolling */
+            position: relative; /* Needed for positioning pseudo-element */
+            font-family: 'Arial', sans-serif;
+        }
+
+        body::before {
+            content: "";
+            position: fixed; /* Changed from absolute to fixed to cover viewport */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("https://m.media-amazon.com/images/S/pv-target-images/6e1a61eca22916e69cada877cdbd2b1c8c61cce4f91eda71f7b9e034c0ae5349._SX1080_FMjpg_.jpg") no-repeat center center;
+            background-size: cover; /* Ensures the image covers the entire area */
+            filter: blur(8px); /* Apply blur effect */
+            z-index: -1; /* Keeps the background behind all content */
+        }
+
+        .blur-container {
+            width: 90%;
+            max-width: 1200px;
+            height: 70%;
+            border-radius: 10px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+            display: flex;
+            align-items: center;
+            position: relative; /* Relative to the body */
+            z-index: 1; /* Above the pseudo-element */
+            overflow: hidden; /* Keeps child elements contained */
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+        }
+
+        .text-container {
+            flex: 2;
+            padding: 20px;
+        }
+
+        h1, p, .links {
+            color: #f4f4f2;
+        }
+
+        a {
+            color: #f4f4f2;
+            text-decoration: none;
+            display: block;
+            margin-top: 5px;
+        }
+
+        a:hover {
+            color: #ccc;
+            text-decoration: underline;
+        }
+    </style> -->
+</head>
+<body>
+    <div class="blur-container">
+        <div class="image-container">
+            <img src="{% static 'images/FantasticMrFox.jpg' %}" alt="Fantastic Mr. Fox poster">
+        </div>
+        <div class="text-container">
+            <h1>Fantastic Mr. Fox</h1>
+            <p>After 12 years of bucolic bliss, Mr. Fox (George Clooney) breaks a promise to his wife (Meryl Streep) and raids the farms of their human neighbors, endangering not only his marriage but also the lives of his family and their animal friends. When the farmers force Mr. Fox and company deep underground, he must resort to his natural craftiness to rise above the opposition.</p>
+            <div class="links">
+                <a href="https://www.imdb.com/title/tt0432283/">IMDb</a>
+                <a href="https://youtu.be/n2igjYFojUo?si=sQDF3TKIqrmwzJtf">Official Trailer</a>
+                <a href="https://tv.apple.com/sa/movie/fantastic-mr-fox/umc.cmc.rjm5r8m9xnog8o1rzzl2mxc3">Watch it on Apple TV</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+body, html {
+    height: 100%; /* Ensure the full height of the viewport */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent scrolling */
+    position: relative; /* Needed for positioning pseudo-element */
+    font-family: 'Arial', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Changed from absolute to fixed to cover viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("https://m.media-amazon.com/images/S/pv-target-images/6e1a61eca22916e69cada877cdbd2b1c8c61cce4f91eda71f7b9e034c0ae5349._SX1080_FMjpg_.jpg") no-repeat center center;
+    background-size: cover; /* Ensures the image covers the entire area */
+    filter: blur(8px); /* Apply blur effect */
+    z-index: -1; /* Keeps the background behind all content */
+}
+
+.blur-container {
+    width: 90%;
+    max-width: 1200px;
+    height: 70%;
+    border-radius: 10px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    display: flex;
+    align-items: center;
+    position: relative; /* Relative to the body */
+    z-index: 1; /* Above the pseudo-element */
+    overflow: hidden; /* Keeps child elements contained */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+}
+
+.text-container {
+    flex: 2;
+    padding: 20px;
+}
+
+h1, p, .links {
+    color: #f4f4f2;
+}
+
+a {
+    color: #f4f4f2;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+}
+
+a:hover {
+    color: #ccc;
+    text-decoration: underline;
+}

@@ -7,3 +7,8 @@ def home_page(request:HttpRequest):
 
 def movies_page(request:HttpRequest):
     return render(request,"main/movies_page.html")
+def FantasticMrFox(request:HttpRequest):
+    return render(request,"main/FantasticMrFox.html")
+
+def spiritedAway(request:HttpRequest):
+    return render(request,"main/spiritedAway.html")
