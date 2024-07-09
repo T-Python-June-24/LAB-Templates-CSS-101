@@ -1,3 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="static/css/style1.css">
+    <title>My Bookstore</title>
+</head>
+<body>
+    <div class="main-header">
+        <div class="header">
+            <img id="header-image" src="static/images/header.jpg" alt="Header Image">
+            <div id="menu-header">
+                <div id="menu">
+                    <a href="#" class="btn active">الرئيسية</a>
+                    <a href="#" class="btn">الكتب</a>
+                    <a href="#" class="btn">التقييم</a>
+                    <a href="#" class="btn">مقالات</a>
+                    <a href="{% url 'books:contact_us' %}" class="btn">تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+        <div id="main-content">
+            <div id="centered-content">
+                <h1>عالم الكتب</h1>
+                <div id="img-frame">
+                    <img src="static/images/logo.jpg" alt="Bookstore Logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
 <!-- 
 <html>
     <head>
@@ -114,124 +151,3 @@
         </div>
     </body>
 </html>  -->
-
-
-
-
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif; /* Optional: Setting a common font */
-            direction: rtl; /* Right-to-left text direction */
-            text-align: right; /* Right-align text */
-        }
-        .header {
-            width: 100%;
-            height: 460px;
-            background-color: red;
-            overflow: hidden;
-            position: relative; /* Ensure relative positioning for child elements */
-        }
-        .header img {
-            width: 100%;
-            display: block; /* Ensure the image behaves as a block element */
-        }
-        #menu-header {
-            width: 100%;
-            height: 50px;
-            position: absolute;
-            top: 0;
-        }
-        #menu {
-            margin-right: 10px;
-            margin-top: 20px;
-        }
-        #menu > .btn {
-            margin-right: 30px;
-            color: rgb(49, 2, 85);
-            text-decoration: none;
-            padding: 5px;
-            border-radius: 10px;
-            transition: background 0.3s;
-        }
-        #menu > .btn:hover {
-            color: rgb(126, 219, 5);
-        }
-        .active {
-            background-color: coral;
-        }
-        #main-content {
-            width: 100%;
-            background-color: green;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: calc(100vh - 460px); /* Adjust the height as per your design */
-        }
-        #img-frame {
-            height: 200px;
-            width: 200px;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: greenyellow;
-            border-radius: 50%;
-            margin: 0 auto;
-            box-shadow: 0px 9px 8px rgb(204, 187, 187);
-            transition: box-shadow 0.2s;
-        }
-        #img-frame img {
-            height: 100%;
-            width: 100%; /* Ensure the image fills the circular frame */
-            border-radius: 50%; /* Ensure the image itself is circular */
-            object-fit: cover; /* Maintain aspect ratio and cover the container */
-        }
-        #img-frame:hover {
-            box-shadow: 0px 9px 8px rgb(204, 187, 187);
-            padding: 15px;
-        }
-        #centered-content {
-            text-align: center;
-            color: red;
-        }
-    </style>
-    <title>My Bookstore</title>
-</head>
-<body>
-    <div class="main-header">
-        <div class="header">
-            <img id="header-image" src="static/images/header.jpg" alt="Header Image">
-            <div id="menu-header">
-                <div id="menu">
-                    <a href="#" class="btn active">الرئيسية</a>
-                    <a href="#" class="btn">الكتب</a>
-                    <a href="#" class="btn">التقييم</a>
-                    <a href="#" class="btn">مقالات</a>
-                    <a href="/contact/us/" class="btn">تواصل معنا</a>
-                </div>
-            </div>
-        </div>
-        <div id="main-content">
-            <div id="centered-content">
-                <h1>عالم الكتب</h1>
-                <div id="img-frame">
-                    <img src="static/images/logo.jpg" alt="Bookstore Logo">
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
