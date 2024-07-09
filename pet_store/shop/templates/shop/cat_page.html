@@ -1,0 +1,28 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}Cat Products{% endblock %}
+
+{% block banner %}
+    <div class="banner-container">
+        <img src="{% static 'images/cat1.jpg' %}" alt="Cat Banner" class="banner-image">
+    </div>
+{% endblock %}
+
+{% block content %}
+    <h2>Cat Products</h2>
+    <div class="products-grid">
+        {% for product in products %}
+            <div class="product">
+                <img src="{% static product.image %}" alt="{{ product.name }}">
+                <h3>{{ product.description }}</h3>
+                <p>{{ product.price }} SR</p>
+                <form method="post" action="{% url 'add_to_cart' product.id %}">
+                    {% csrf_token %}
+                    <input type="number" name="quantity" value="1" min="1">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}View Cart{% endblock %}
+
+{% block content %}
+<h2>Your Cart</h2>
+{% if cart %}
+    <form method="post" action="{% url 'update_cart' %}">
+        {% csrf_token %}
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Item Number</th>
+                    <th>Product</th>
+                    <th>Photo</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in cart %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ item.product.name }}</td>
+                    <td><img src="{% static item.product.image %}" alt="{{ item.product.name }}" class="product-image"></td>
+                    <td>
+                        <input type="number" name="quantities" value="{{ item.quantity }}" min="1" data-product-id="{{ item.product.id }}">
+                    </td>
+                    <td>{{ item.product.price }} SR</td>
+                    <td>{{ item.total }} SR</td>
+                    <td>
+                        <button type="submit" name="remove" value="{{ item.product.id }}">Remove</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="cart-total">
+            <p>Total: {{ total }} SR</p>
+        </div>
+    </form>
+{% else %}
+    <p>Your cart is empty.</p>
+{% endif %}
+{% endblock %}

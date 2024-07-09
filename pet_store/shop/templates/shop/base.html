@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+  <header>
+    <h1>Welcome to R Pet Store</h1>
+    {% block banner %}
+      <div class="banner-container">
+        <div class="banner">
+          <img src="{% static 'images/petstore2.png' %}" alt="Banner 1">
+          <img src="{% static 'images/petstore3.jpg' %}" alt="Banner 2">
+          <img src="{% static 'images/petstore1.jpg' %}" alt="Banner 3">
+        </div>
+      </div>
+    {% endblock %}
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'cat_page' %}">Cats</a></li>
+        <li><a href="{% url 'dog_page' %}">Dogs</a></li>
+        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer>
+    <p>@R_PetStore</p>
+    <p>+966 503782355</p>
+    <p>R_PetStore@outlook.com</p>
+  </footer>
+</body>
+</html>
