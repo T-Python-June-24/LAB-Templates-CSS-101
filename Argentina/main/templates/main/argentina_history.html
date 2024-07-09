@@ -15,19 +15,26 @@
     <header>
         <h6>Campeones del Mundo</h6>
         <nav>
-            <a href="">Home</a>
-            <a href="argentina/history/">Argentina History</a>
-            <a href="wc/history/">WC History</a>
-            <a href="chi/givara/">Chi Givara</a>
-            <a href="maradona/">Maradona</a>
-            <a href="messi/">Messi</a>
-            <a href="about/">About</a>
+            <a href="{% url 'main:home' %}">Home</a>
+            <a href="{% url 'main:argentina_history' %}">Argentina History</a>
+            <a href="{% url 'main:wc_history' %}">WC History</a>
+            <a href="{% url 'main:chi_givara' %}">Chi Givara</a>
+            <a href="{% url 'main:maradona' %}">Maradona</a>
+            <a href="{% url 'main:messi' %}">Messi</a>
+            <a href="{% url 'main:about' %}">About</a>
         </nav>
         <form action="#">
             <input type="text" placeholder="Search">
             <button type="submit">Go</button>
         </form>
     </header>
+
+    <img src="{% static '/Arg1.jpg' %}" alt="Lionel Messi" width="200" height="200">
+    <img src="{% static '/Arg2.jpg' %}" alt="Beunous" width="200" height="200">
+    <img src="{% static '/Arg3.jpg' %}" alt="Aires" width="200" height="200">
+    <img src="{% static '/Arg5.jpg' %}" alt="Chi Givara" width="200" height="200">
+    <img src="{% static '/Arg6.jpg' %}" alt="Maradona" width="200" height="200">
+
     <pre>
             A Tango Through Time: A History of Argentina
         Argentina, a land of passionate tango, sweeping plains, 
