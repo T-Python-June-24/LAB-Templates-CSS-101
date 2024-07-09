@@ -1,0 +1,54 @@
+{% load static %}
+<link rel="shortcut icon" type="image/jpg" href="{% static 'images/favicon.jpg' %}">
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link href="{% static 'styles/style.css' %}" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Assignment</title>
+</head>
+
+<body>
+  <h1>LAB-Templates-CSS-101</h1>
+  <img src="{% static 'images/Car.jpg' %}">
+  <p>    Car rentals provide a convenient solution for travelers needing temporary transportation.
+    Whether for business trips or vacations, renting a car offers flexibility and freedom to explore without the commitment of ownership.
+    Companies typically offer a variety of vehicles to suit different needs, from compact cars for solo travelers to spacious SUVs for families.
+    Rental agreements are straightforward, usually including insurance options and mileage allowances.
+    With easy booking processes online or at rental counters, customers can quickly get on the road and enjoy their journey with peace of mind.
+</p>
+
+<table>
+  <caption>
+    Car types available for rent
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">Car type</th>
+      <th scope="col">Usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Sedan</th>
+      <td>A sedan is a passenger car with a separate trunk and usually four doors.</td>
+    </tr>
+    <tr>
+      <th scope="row">SUV</th>
+      <td>An SUV (Sport Utility Vehicle) is designed for both on-road and off-road use.</td>
+    </tr>
+  </tbody>
+</table>
+<a href="{% url 'main:rental' %}">
+  <ul>
+    <li>Car Rental</li>
+  </ul>
+</a>
+
+</body>
+
+</html>

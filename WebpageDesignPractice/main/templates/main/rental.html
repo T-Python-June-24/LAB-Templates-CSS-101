@@ -1,0 +1,74 @@
+{% load static %}
+<link rel="shortcut icon" type="image/jpg" href="{% static 'images/favicon.jpg' %}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{% static 'styles/style.css' %}" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Cars</title>
+</head>
+<body>
+
+    <h1>Rental Cars</h1>
+
+    <h2>About Us</h2>
+
+    <p>Welcome to our rental car service! We provide a wide range of vehicles to suit your needs.</p>
+
+    <h2>Our Fleet</h2>
+
+    <h3>Sedans</h3>
+
+    <img src="sedan.jpg" alt="A picture of a sedan">
+
+    <p>We offer affordable and fuel-efficient sedans ideal for city driving.</p>
+
+    <h3>SUVs</h3>
+
+    <img src="suv.jpg" alt="A picture of an SUV">
+
+    <p>For those who prefer performance, our SUVs provide the ultimate driving experience.</p>
+
+    <h2>Rental Rates</h2>
+
+    <table>
+        <caption>Rental Rates per Day</caption>
+        <thead>
+            <tr>
+                <th>Car Type</th>
+                <th>Rate (SAR)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sedan</td>
+                <td>150</td>
+            </tr>
+            <tr>
+                <td>SUV</td>
+                <td>400</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Book Your Car</h2>
+
+    <form action="submit_booking" method="POST">
+        <label for="car_type">Select Car Type:</label>
+        <select id="car_type" name="car_type">
+            <option value="sedan">Sedan</option>
+            <option value="suv">SUV</option>
+        </select>
+        <br><br>
+        <label for="pickup_date">Pickup Date:</label>
+        <input type="date" id="pickup_date" name="pickup_date" required>
+        <br><br>
+        <label for="return_date">Return Date:</label>
+        <input type="date" id="return_date" name="return_date" required>
+        <br><br>
+        <button type="submit">Submit Booking</button>
+    </form>
+
+</body>
+</html>
