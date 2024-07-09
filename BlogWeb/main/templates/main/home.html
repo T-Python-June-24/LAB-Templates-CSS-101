@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/CSS/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'CSS/output.css' %}"
+      type="text/css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-container">
+        <a href="{% url 'main:home_view' %}" class="navbar-logo">
+          <img src="/static/images/logo.png" alt="Logo" />
+        </a>
+        <nav class="navbar-menu">
+          <a href="{% url 'main:home_view' %}" class="navbar-link"
+            ><i class="fa fa-fw fa-home"></i> Home
+          </a>
+          <a href="{% url 'main:contactUs_view'%}" class="navbar-link"
+            ><i class="fa fa-fw fa-envelope"></i>Contact Us</a
+          >
+          <a href="" class="navbar-link"
+            ><i class="fa fa-fw fa-file"></i>Blogs</a
+          >
+          <a href="" class="navbar-link"
+            ><i class="fa fa-fw fa-user-plus"></i>SingUp</a
+          >
+          <a href="" class="navbar-link"
+            ><i class="fa fa-sign-in-alt"></i>LogIn</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="animated-gradient">
+        <div class="hero-text">
+          <h2>Publish your passions, your way</h2>
+          <p>Read a unique and beautiful blog .</p>
+          <button class="button1">Read blogs now !!</button>
+        </div>
+      </div>
+      <hr />
+      <section>
+        <div class="bg-white py-24 sm:py-32">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:mx-0">
+              <h2
+                class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+              >
+                From the blog
+              </h2>
+              <p class="mt-2 text-lg leading-8 text-gray-600">
+                Explore our massive article here .
+              </p>
+            </div>
+            <div
+              class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-black-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+            >
+              <article
+                class="flex max-w-xl flex-col items-start justify-between"
+              >
+                <div class="flex items-center gap-x-4 text-xs">
+                  <time datetime="2020-03-16" class="text-gray-500"
+                    >Mar 16, 2020</time
+                  >
+                  <a
+                    href="#"
+                    class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                    >Marketing</a
+                  >
+                </div>
+                <div class="group relative">
+                  <h3
+                    class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600"
+                  >
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      <img src="/static/images/sportImage.jpeg" />
+                    </a>
+                    <p>Why the sport is important?</p>
+                  </h3>
+                  <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                    Sports play a significant role in individual and societal
+                    well-being for various reasons. Here are some key points
+                    highlighting the importance of sports: Physical Health
+                    Benefits Improved Cardiovascular Health: Engaging in sports
+                    helps to improve heart health, reducing the risk of
+                    cardiovascular diseases. Weight Management:
+                  </p>
+                </div>
+                <div class="relative mt-8 flex items-center gap-x-4">
+                  <img
+                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                    class="h-10 w-10 rounded-full bg-gray-50"
+                  />
+                  <div class="text-sm leading-6">
+                    <p class="font-semibold text-gray-900">
+                      <a href="#">
+                        <span class="absolute inset-0"></span>
+                        Michael Foster
+                      </a>
+                    </p>
+                    <p class="text-gray-600">Co-Founder / CTO</p>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="flex max-w-xl flex-col items-start justify-between"
+              >
+                <div class="flex items-center gap-x-4 text-xs">
+                  <time datetime="2020-03-16" class="text-gray-500"
+                    >Apr 16, 2021</time
+                  >
+                  <a
+                    href="#"
+                    class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                    >Tech</a
+                  >
+                </div>
+                <div class="group relative">
+                  <h3
+                    class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600"
+                  >
+                    <a href="#"> <span class="absolute inset-0"></span> </a
+                    ><img src="/static/images/AiImage.jpeg" />
+                    Will artificial intelligence take over the future?
+                  </h3>
+                  <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                    The question of whether artificial intelligence (AI) will
+                    take over the future is complex and involves multiple
+                    dimensions, including technological, ethical, social, and
+                    economic aspects. Here are some key points to consider:
+                  </p>
+                </div>
+                <div class="relative mt-8 flex items-center gap-x-4">
+                  <img
+                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                    class="h-10 w-10 rounded-full bg-gray-50"
+                  />
+                  <div class="text-sm leading-6">
+                    <p class="font-semibold text-gray-900">
+                      <a href="#">
+                        <span class="absolute inset-0"></span>
+                        <p>Lindsay Walton</p>
+                      </a>
+                    </p>
+                    <p class="text-gray-600">Software Engineer</p>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="flex max-w-xl flex-col items-start justify-between"
+              >
+                <div class="flex items-center gap-x-4 text-xs">
+                  <time datetime="2020-03-16" class="text-gray-500"
+                    >May 16, 2024</time
+                  >
+                  <a
+                    href="#"
+                    class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+                    >Business</a
+                  >
+                </div>
+                <div class="group relative">
+                  <h3
+                    class="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600"
+                  >
+                    <a href="#">
+                      <span class="absolute inset-0"></span>
+                      <img src="/static/images/timeImage.jpeg" />
+                      Boost your time management
+                    </a>
+                  </h3>
+                  <p class="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+                    Improving time management can greatly enhance productivity
+                    and reduce stress. Here are some practical steps to boost
+                    your time management skills: 1. Set Clear Goals SMART Goals:
+                    Ensure your goals are Specific, Measurable, Achievable,
+                    Relevant, and Time-bound. Prioritize: Determine what tasks
+                    are most important and focus on completing those first.
+                  </p>
+                </div>
+                <div class="relative mt-8 flex items-center gap-x-4">
+                  <img
+                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                    class="h-10 w-10 rounded-full bg-gray-50"
+                  />
+                  <div class="text-sm leading-6">
+                    <p class="font-semibold text-gray-900">
+                      <a href="#">
+                        <span class="absolute inset-0"></span>
+                        Tom Crouse
+                      </a>
+                    </p>
+                    <p class="text-gray-600">Director of Product</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <hr />
+    <footer class="bg-gray-100 text-black py-8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-between">
+          <div class="w-full sm:w-1/2 md:w-1/4 mb-6">
+            <h3 class="text-lg font-bold mb-2">About Us</h3>
+            <p>
+              Welcome to our blog! We share articles on various topics, from
+              technology to lifestyle. Stay tuned for regular updates.
+            </p>
+          </div>
+          <div class="w-full sm:w-1/2 md:w-1/4 mb-6">
+            <h3 class="text-lg font-bold mb-2">Follow Us</h3>
+            <ul class="flex space-x-4">
+              <li>
+                <a href="#" class="text-black hover:text-gray-400"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="text-black hover:text-gray-400"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="text-black hover:text-gray-400"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="text-black hover:text-gray-400"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full sm:w-1/2 md:w-1/4 mb-6">
+            <h3 class="text-lg font-bold mb-2">Contact Us</h3>
+            <p>Email: contact@blogwebsite.com</p>
+            <p>Phone: +123 456 7890</p>
+          </div>
+          <div class="w-full sm:w-1/2 md:w-1/4 mb-6">
+            <h3 class="text-lg font-bold mb-2">Quick Links</h3>
+            <ul>
+              <li>
+                <a href="#" class="text-black hover:text-gray-400">Home</a>
+              </li>
+              <li>
+                <a
+                  href="{% url 'main:contactUs_view'%}"
+                  class="text-black hover:text-gray-400"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-black hover:text-gray-400">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+          <p>&copy; 2024 Blog Website. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
