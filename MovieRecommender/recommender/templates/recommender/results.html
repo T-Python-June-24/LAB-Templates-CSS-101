@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Movie Recommendations</h1>
+    </header>
+    <main>
+        <h2>Recommended Movies:</h2>
+        <ul>
+            {% for movie in movies %}
+                <li>
+                    <strong>{{ movie.title }}</strong><br>
+                    Genre: {{ movie.genre }}<br>
+                    Country: {{ movie.country }}<br>
+                    Released in: {{ movie.year }}
+                </li>
+            {% empty %}
+                <p>No recommendations available.</p>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'home' %}">Back to Home</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 Movie Recommender</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact - Apple Products</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}">Apple Products</a></h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+        <form method="GET" action="{% url 'home' %}">
+            <input type="text" name="q" placeholder="Search..." value="{{ search_query }}">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+    <main>
+        <div class="product-detail">
+            <h2>{{ product.name }}</h2>
+            <img src="{{ product.image }}" alt="{{ product.name }}">
+            <p>{{ product.description }}</p>
+            <p>Price: ${{ product.price }}</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Apple Products</p>
+    </footer>
+</body>
+</html>

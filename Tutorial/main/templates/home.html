@@ -1,0 +1,124 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>test</title>
+</head>
+<body>
+    
+    <!-- basics -->
+    <div class="section" id="welcome-section">
+        <center>
+            <h1> Welcome! </h1>
+            <p>This is <strong>Ray's</strong> <i>world!</i> </p>
+            <br/>
+        </center>
+    </div>
+
+    <div class="section" id="featured-products">
+        <center>
+            <img src="static/apple-logo.gif" alt="Apple to heart animated image">
+            <p>Link to <a href="https://www.apple.com/sa/">Apple </a> website.</p>
+            <br/>
+        </center>
+    </div>
+
+    <!-- lists + tables -->
+    <div class="section" id="content-section">
+        <div id="lists">
+            <h3>Top Products</h3>
+            <ol>
+                <li>iPhone</li>
+                <li>iPad</li>
+                <li>MacBook</li>
+            </ol>
+            <div id="list2">
+                <h3>Some Accessories</h3>
+                <ul>
+                    <li>AirPods</li>
+                    <li>Apple Watch</li>
+                    <li>HomePod</li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        <div id="table">
+            <table border="1">
+                <tr>
+                    <th>Product</th>
+                    <th>Image</th>
+                    <th>Features</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>iPhone 15 Pro</td>
+                    <td><img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-15-pro-storage-select-202309-6-1inch-naturaltitanium?wid=5120&hei=2880&fmt=webp&qlt=70&.v=WnNUZFU5d1pNaEFEbkNoVG4wZVZnVkIvTXY5NjBUQVhVcnFORUt4SFI2RHZQMUExZkU5NktGZ3Z6WTRHanNVVTk2dUJNU0dRdTRmS3NuSStUNEloMTZyeklvaXVkOCtBWFpMeWRrK0lya3lwU2htSWFYNUxrcUx0RW1zN3h2QzM2WmdEbWhiWGtWcGN4SHFFMXNPbGNRPT0=&traceId=1" alt="iPhone 15 Pro" width="300"></td>
+                    <td>
+                        <table border="0">
+                            <tr><td>48MP Camera</td></tr>
+                            <tr><td>A17 Pro chip</td></tr>
+                            <tr><td>5x Telephoto</td></tr>
+                            <tr><td>USB-C</td></tr>
+                        </table>
+                    </td>
+                    <td>$999</td>
+                </tr>
+                <tr>
+                    <td>MacBook Pro 16-inch</td>
+                    <td><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp16-spaceblack-select-202310?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1697311054290" alt="MacBook Pro 16-inch" width="200"></td>
+                    <td>
+                        <table border="0">
+                            <tr><td>M3 Max chip</td></tr>
+                            <tr><td>16-core CPU</td></tr>
+                            <tr><td>40-core GPU</td></tr>
+                            <tr><td>128GB RAM</td></tr>
+                        </table>
+                    </td>
+                    <td>$3499</td>
+                </tr>
+                <tr>
+                    <td>iPad Pro 12.9-inch</td>
+                    <td><img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-pro-storage-select-202405-13inch-spaceblack-matte-wificell?wid=5120&hei=2880&fmt=p-jpg&qlt=95&.v=1713697975743" alt="iPad Pro 12.9-inch" width="300""></td>
+                    <td>
+                        <table border="0">
+                            <tr><td>M2 chip</td></tr>
+                            <tr><td>12.9-inch Display</td></tr>
+                            <tr><td>5G Capability</td></tr>
+                            <tr><td>Apple Pencil Support</td></tr>
+                        </table>
+                    </td>
+                    <td>$1099</td>
+                </tr>
+            </table>
+            <br/>
+        </div>
+    </div>
+
+
+    <!-- form -->
+    <div class="section" id="contact-form">
+        <center>
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+                
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </center>
+    </div>
+
+
+</body>
+</html>
