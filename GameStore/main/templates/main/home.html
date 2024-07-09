@@ -5,13 +5,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Game Store</title>
-  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-  <div class="user-account-icon">
-    <img src="{% static 'profile.jpg' %}" class="user-profile-img" alt="user profile image">
-  </div>
-  <h1 class="title"> Games </h1>
+  <header>
+    <div>
+      <img class="logo" src="{% static 'images/logo.png' %}" alt="Gaming Store logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="{% url 'main:about_view' %}">About Us</a></li>
+        <li><a href="{% url 'main:contact_view' %}">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Games</h1>
+    <div id="products">
+        <div class="product">
+          <img src="{% static 'images/image1.png'%}" alt="Fortnite game image">
+          <div class="product-info">
+            <h2>Fortnite</h2>
+            <p>Price: $29.99</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="{% static 'images/image2.png'%}" alt="Call of duty game image">
+          <div class="product-info">
+            <h2>Call of duty</h2>
+            <p>Price: $39.99</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="{% static 'images/image3.png'%}" alt="Uncharted game image">
+          <div class="product-info">
+            <h2>Uncharted 2</h2>
+            <p>Price: $49.99</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="{% static 'images/image1.png'%}" alt="Fortnite game image">
+          <div class="product-info">
+            <h2>Fortnite</h2>
+            <p>Price: $29.99</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="{% static 'images/image2.png'%}" alt="Call of duty game image">
+          <div class="product-info">
+            <h2>Call of duty</h2>
+            <p>Price: $39.99</p>
+          </div>
+        </div>
+        <div class="product">
+          <img src="{% static 'images/image3.png'%}" alt="Uncharted game image">
+          <div class="product-info">
+            <h2>Uncharted 2</h2>
+            <p>Price: $49.99</p>
+          </div>
+        </div>
+      </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 Gaming Store</p>
+</footer>
 
 </body>
 </html>

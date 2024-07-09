@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About us Page</title>
+  <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+<body>
+  <header>
+    <div>
+        <img class="logo" src="{% static 'images/logo.png' %}" alt="Gaming Store logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{% url 'main:home_view' %}">Home</a></li>
+            <li><a href="{% url 'main:about_view' %}">About Us</a></li>
+            <li><a href="{% url 'main:contact_view' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="about-us">
+        <h1>About Us</h1>
+        <div class="content">
+            <img src="{% static 'images/team.png' %}" alt="Our Team">
+            <div class="text">
+                <p>Welcome to our game store website. We are passionate about bringing the best gaming experience to our users. Our team consists of experienced professionals who are dedicated to providing the latest games and updates. We believe in the power of gaming to bring people together and create memorable experiences.</p>
+                <p>Our mission is to offer a diverse range of games that cater to all types of gamers. From action-packed adventures to strategic puzzles, we have something for everyone. Join our community and start your gaming journey with us today!</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Gaming Website</p>
+</footer>
+</body>
+</html>
