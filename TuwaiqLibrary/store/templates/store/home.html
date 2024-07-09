@@ -1,0 +1,78 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>TuwaiqLibrary</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-1">
+            <a href="#" class="logo"> <i class="fas fa-book"> Tuwaiq Library</i> </a>
+            <form action="" class="search-form">
+                <input type="search" name="" placeholder="search here " id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <div id="login-btn" class="fas fa-user"></div>
+
+            </div>
+        
+        </div>
+
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#featured">featured</a>
+                <a href="#arrivals">arrivals</a>
+                <a href="#reviews">reviews</a>
+                <a href="#contact">contact</a>
+                <a href="#blogs">blogs</a>
+            </nav>
+        </div>
+
+    </header>
+<!-- bottom navbar -->
+    <div class="bottom-navbar">
+        <nav class="navbar">
+            <a href="#home" class="fas fa-home"></a>
+            <a href="#featured" class="fas fa-list"></a>
+            <a href="#arrivals" class="fas fa-tags"></a>
+            <a href="#reviews" class="fas fa-comments"></a>
+            <a href="#blogs" class="fas fa-blogs"></a>
+        </nav>
+    </div>
+<!-- home section -->
+    <section class="home" id="#home">
+        <div class="row">
+
+            <div class="content">
+                <h3>upto 75% off</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum 
+                    possimus nihil voluptas debitis et, perspiciatis eveniet omnis reprehenderit. 
+                    Soluta qui nesciunt sunt, 
+                    voluptatibus facere illo labore cumque quidem repellat nulla.
+                </p>
+                <a href="#" class="btn">shop now</a>
+            </div>
+
+            <div class="books">
+                <div class="img-container1"></div>
+                <div class="img-container2"></div>
+                <div class="img-container3"></div>
+                <div class="img-container4"></div>
+            </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
