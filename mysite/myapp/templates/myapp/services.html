@@ -1,0 +1,153 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}">
+    <script src="{% static 'myapp\script.js' %}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="header">
+        <img src="{% static 'myapp/logo.jpg' %}" height="180px" width="350px">
+        <a href="{% url 'services' %}" class="active">Services</a>
+        <nav>
+            <a href="{% url 'index' %}" class="logo">Home</a>
+            <a href="{% url 'about' %}" class="logo">About</a>
+            <a href="{% url 'contact' %}" class="logo">Contact</a>
+            <a href="{% url 'services' %}" class="logo">Services</a>
+        </nav>
+            
+        <div class="search-container">
+            <input type="text" placeholder="Enter the keywords" id="tsearch">
+            <button class="button" onclick="searchFunction()">Search</button>
+        </div>
+    </div>
+
+
+    
+    <div class="background">
+        <div class="contents">
+            <div class="services">
+            <h1>Shopping Our Flowers</h1>
+            <p>Welcome to our virtual shopping area dedicated to beautiful flowers.</p>
+            <ul>
+                <li>Choose from a variety of fresh flowers</li>
+                <li>Create custom bouquets</li>
+                <li>Seasonal flower arrangements</li>
+            </ul>
+            </div>
+        </div>
+        <div class="flower">
+            <div class="flower_glass"></div>
+            <div class="f-wrapper">
+                <div class="flower_line"></div>
+                <div class="f">
+                    <div class="flower_leaf flower_leaf-1"></div>
+                    <div class="flower_leaf flower_leaf-2"></div>
+                    <div class="flower_leaf flower_leaf-3"></div>
+                    <div class="flower_leaf flower_leaf-4"></div>
+                    <div class="flower_leaf flower_leaf-5"></div>
+                    <div class="flower_leaf flower_leaf-6"></div>
+                    <div class="flower_leaf flower_leaf-7"></div>
+                    <div class="flower_leaf flower_leaf-8 yellow_flower"></div>
+                </div>
+            </div>
+        
+            <div class="f-wrapper f-wrapper-2">
+                <div class="flower_line"></div>
+                <div class="f">
+                    <div class="flower_leaf flower_leaf-1"></div>
+                    <div class="flower_leaf flower_leaf-2"></div>
+                    <div class="flower_leaf flower_leaf-3"></div>
+                    <div class="flower_leaf flower_leaf-4"></div>
+                    <div class="flower_leaf flower_leaf-5"></div>
+                    <div class="flower_leaf flower_leaf-6"></div>
+                    <div class="flower_leaf flower_leaf-7"></div>
+                    <div class="flower_leaf flower_leaf-8 pink_flower"></div>
+                </div>
+            </div>
+        
+            <div class="f-wrapper f-wrapper-3">
+                <div class="flower_line"></div>
+                <div class="f">
+                    <div class="flower_leaf flower_leaf-1"></div>
+                    <div class="flower_leaf flower_leaf-2"></div>
+                    <div class="flower_leaf flower_leaf-3"></div>
+                    <div class="flower_leaf flower_leaf-4"></div>
+                    <div class="flower_leaf flower_leaf-5"></div>
+                    <div class="flower_leaf flower_leaf-6"></div>
+                    <div class="flower_leaf flower_leaf-7"></div>
+                    <div class="flower_leaf flower_leaf-8 purple_flower"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flower-shop">
+        <div class="flower-item">
+            <img src="{% static 'myapp/ef60a6e9c8fbcc515bf3db729dcb381e.jpg' %}" alt="Glowy Rose">
+            <h2>Glowy Rose</h2>
+            <p>500 SAR</p>
+            <button onclick="addToCart('Glowy Rose', 500)">Add to Cart</button>
+        </div>
+        <div class="flower-item">
+            <img src="{% static 'myapp/floral-art_928869-3416.avif' %}" alt="Tulip">
+            <h2>Floral vase</h2>
+            <p>300 SAR</p>
+            <button onclick="addToCart('Tulip', 300)">Add to Cart</button>
+        </div>
+        <div class="flower-item">
+            <img src="{% static 'myapp/OIP (1).jpeg' %}" alt="Purple vase">
+            <h2>Purple vase</h2>
+            <p>500 SAR</p>
+            <button onclick="addToCart('Purple vase', 500)">Add to Cart</button>
+        </div>
+        <div class="flower-item">
+            <img src="{% static 'myapp/OIP (2).jpeg' %}" alt="Butterfly vase">
+            <h2>Butterfly vase</h2>
+            <p>650 SAR</p>
+            <button onclick="addToCart('Butterfly vase', 650)">Add to Cart</button>
+        </div>
+        <div class="flower-item">
+            <img src="{% static 'myapp/OIP.jpeg' %}" alt="1900 vase">
+            <h2>1900's vase</h2>
+            <p>400 SAR</p>
+            <button onclick="addToCart('1900 vase', 400)">Add to Cart</button>
+        </div>
+        <div class="flower-item">
+            <img src="{% static 'myapp/R.jpeg' %}" alt="Blue vase">
+            <h2>Blue vase</h2>
+            <p>600 SAR</p>
+            <button onclick="addToCart('Blue vase', 400)">Add to Cart</button>
+        </div>
+    </div>
+    <div class="total">
+    <h2>Cart Items:</h2>
+    <ul id="cart-items"></ul>
+    <div id="total-price">Total: 0 SAR</div>
+    </div>
+    
+
+    <footer class="footer">
+        <div class="top">
+            <h4>Go to:</h4>
+        </div>
+        <div class="middle">
+            <div class="left">
+                <a href="{% url 'index' %}" class="logo">Home</a>
+                <a href="{% url 'about' %}" class="logo">About</a>
+                <a href="{% url 'contact' %}" class="logo">Contact</a>
+            </div>
+            <br>
+            <div class="right">
+                <h4>Follow us:</h4>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-instagram"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
