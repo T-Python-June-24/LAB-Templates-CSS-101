@@ -21,3 +21,12 @@ function updateCart() {
 
     total.textContent = `Total: ${totalPrice} SAR`;
 }
+
+
+function handleSubmit(event) {
+  event.preventDefault();
+  
+  alert("Message received!");
+  
+  document.getElementById("contact-form").reset();
+}
